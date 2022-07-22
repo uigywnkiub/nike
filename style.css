@@ -315,8 +315,8 @@ body {
 
 .btn-fav-icon {
   position: absolute;
-  top: 22px;
-  right: 130px;
+  top: 22.2px;
+  right: 138px;
   width: 15px;
 }
 
@@ -516,7 +516,10 @@ body {
 .extra-block {
   display: flex;
   flex-direction: column;
-  width: 400px;
+}
+
+.extra-block img {
+  width: 100%;
 }
 
 .extra-block-text {
@@ -756,6 +759,10 @@ h4 {
     display: none;
   }
 
+  .btn-fav-icon {
+    right: calc(138px - 5px);
+  }
+
   .header-logo {
     margin-right: 20px;
   }
@@ -833,7 +840,7 @@ h4 {
   }
 
   .btn-fav-icon {
-    right: calc(130px - 20px);
+    right: calc(138px - 25px);
   }
 
   .product-section img {
