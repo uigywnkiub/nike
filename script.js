@@ -17,6 +17,65 @@ $(window).scroll(
 )
 
 let isClick = false
+//changeable sneakers button
+$('#repeatIcon').click(() => {
+  if (isClick) {
+    isClick = false
+    $('#repeatIcon').addClass('animate__animated animate__bounceIn ')
+    $('#changeImg-1').attr('src', './images/extra_sneakers/sneaker-1.webp')
+    $('#changeImg-2').attr('src', './images/extra_sneakers/sneaker-2.webp')
+    $('#changeImg-3').attr('src', './images/extra_sneakers/sneaker-3.webp')
+    $('#changeImg-4').attr('src', './images/extra_sneakers/sneaker-4.webp')
+    $('#changeImg-1, #changeImg-2, #changeImg-3, #changeImg-4').removeClass(
+      'animate__animated animate__wobble'
+    )
+    $('#changeImg-1, #changeImg-2, #changeImg-3, #changeImg-4').addClass(
+      'animate__animated animate__swing'
+    )
+    $('.extra-block-text')
+      .addClass('animate__animated animate__bounceInRight')
+      .on('animationend', () => {
+        $('.extra-block-text').removeClass(
+          'animate__animated animate__bounceInRight'
+        )
+      })
+  } else {
+    $('.btn-fav>img').attr('src', './images/icons/heart-fill.svg')
+    $('#repeatIcon')
+      .addClass('animate__animated animate__bounceIn')
+      .on('animationend', () => {
+        $('#repeatIcon').removeClass('animate__animated animate__bounceIn')
+      })
+    $('#changeImg-1').attr(
+      'src',
+      './images/extra_sneakers_changeable/sneaker-1.webp'
+    )
+    $('#changeImg-2').attr(
+      'src',
+      './images/extra_sneakers_changeable/sneaker-2.webp'
+    )
+    $('#changeImg-3').attr(
+      'src',
+      './images/extra_sneakers_changeable/sneaker-3.webp'
+    )
+    $('#changeImg-4').attr(
+      'src',
+      './images/extra_sneakers_changeable/sneaker-4.webp'
+    )
+    $('#changeImg-1, #changeImg-2, #changeImg-3, #changeImg-4').addClass(
+      'animate__animated animate__wobble'
+    )
+    $('.extra-block-text')
+      .addClass('animate__animated animate__bounceInLeft ')
+      .on('animationend', () => {
+        $('.extra-block-text').removeClass(
+          'animate__animated animate__bounceInLeft '
+        )
+      })
+    isClick = true
+  }
+})
+
 //removeable heart on favorite button
 $('.btn-fav').click(() => {
   if (isClick) {
