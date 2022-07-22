@@ -80,6 +80,10 @@ body {
   border-radius: 30px;
 }
 
+.search-bar-icons:last-child {
+  padding: 9px 0 9px 9px;
+}
+
 .search-bar-icons:first-child:hover {
   border-radius: 30px;
   background-color: rgb(230, 230, 230);
@@ -816,7 +820,7 @@ h4 {
   .product-section p:last-child {
     font-size: 16px;
   }
-  
+
   .extra-sneakers {
     flex-wrap: wrap;
   }
